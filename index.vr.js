@@ -6,7 +6,10 @@ import {
   Text,
   View,
   Video,
+  Model,
   MediaPlayerState,
+  PointLight,
+  Plane
 } from 'react-vr';
 
 import GazeImageButton from "./Components/GazeImageButton.js";
@@ -35,7 +38,9 @@ export default class reactvr extends React.Component {
 
     return (
       <View>
-        <Pano source={asset( 'meeting_room.jpg')} />
+
+
+        <Pano source={asset( 'meeting_room.jpg')} decay={2} distance={0}  intensity={10}/>
 
         <View  style={{
 
@@ -62,6 +67,14 @@ export default class reactvr extends React.Component {
 
 
          </View>
+         <Model
+          style={{transform:[{translate:[-2,-2,5]},{scale:0.02},{rotateY:180}]}}
+          
+           source={{
+             obj: asset('luigi textured obj.obj'),
+             mtl: asset('luigi textured obj.mtl'),
+           }}
+         />
 
       </View>
 

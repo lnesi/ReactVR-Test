@@ -12,7 +12,7 @@ class GazeImageButton extends React.Component{
     super();
     this.state = {
       on:false,
-      currentImage:'',
+      currentImage:{uri:''},
       currentColor:"black",
       timer:null,
       imageStyle:{opacity:0.5}
