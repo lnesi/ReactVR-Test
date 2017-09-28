@@ -9,14 +9,15 @@ import {
   Model,
   MediaPlayerState,
   PointLight,
-  Plane
+  Plane,
+  NativeModules
 } from 'react-vr';
 
 import GazeImageButton from "./Components/GazeImageButton.js";
 
 
 
-
+const roomModule = NativeModules.RoomSceneModule;
 
 export default class reactvr extends React.Component {
   constructor() {
@@ -40,21 +41,23 @@ export default class reactvr extends React.Component {
       <View>
 
 
-        <Pano source={asset( 'meeting_room.jpg')} decay={2} distance={0}  intensity={10}/>
+
 
         <View  style={{
 
          flexDirection: 'column',
          alignItems: 'center',
          justifyContent: 'flex-start',
-         transform: [{translate: [0, 0, -5]}],
+         transform: [{translate: [0, 0, -10]}],
          layoutOrigin: [0.5,0.5]}}>
-           <Video  playerState={this.state.playerState}
-                   style={{width: 3.54, height:2.0, transform:[{translate:[0.11,0.25,-0.4]}]}}
+           <Video
+                   name="videp"
+                   playerState={this.state.playerState}
+                    style={{width: 8.52, height:4.80, transform:[{translate:[-0.25,0.4,-0.6]}]}}
                    source={asset('two.mp4')} />
             <GazeImageButton
-              imageStyle={{width:0.25, height:0.25}}
-              holderStyle={{transform:[{translate:[-1.35,0.6,0]}]}}
+              imageStyle={{width:0.38, height:0.38}}
+              holderStyle={{transform:[{translate:[-0.25,0.36,0]}]}}
               enterColor="#e7004e"
               restColor="#4ab3ca"
               clickColor="#393739"
@@ -67,14 +70,8 @@ export default class reactvr extends React.Component {
 
 
          </View>
-         <Model
-          style={{transform:[{translate:[-2,-2,5]},{scale:0.02},{rotateY:180}]}}
-          
-           source={{
-             obj: asset('luigi textured obj.obj'),
-             mtl: asset('luigi textured obj.mtl'),
-           }}
-         />
+
+
 
       </View>
 

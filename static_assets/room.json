@@ -1,0 +1,157 @@
+{
+	"metadata": {
+		"version": 4.5,
+		"type": "Object",
+		"generator": "Object3D.toJSON"
+	},
+	"geometries": [
+		{
+			"uuid": "D90AC4E8-2621-400E-92AD-F938D55C3A82",
+			"type": "SphereBufferGeometry",
+			"radius": 1,
+			"widthSegments": 32,
+			"heightSegments": 16,
+			"phiStart": 0,
+			"phiLength": 6.283185,
+			"thetaStart": 0,
+			"thetaLength": 3.141593
+		},
+		{
+			"uuid": "4E40CB60-462E-40E1-9446-525B25EAD2B0",
+			"type": "PlaneBufferGeometry",
+			"width": 24,
+			"height": 24,
+			"widthSegments": 0,
+			"heightSegments": 0
+		},
+		{
+			"uuid": "9DE6EE29-FBF6-42EA-8FD1-8D83D17F88FE",
+			"type": "PlaneBufferGeometry",
+			"width": 24,
+			"height": 8,
+			"widthSegments": 0,
+			"heightSegments": 0
+		}],
+	"materials": [
+		{
+			"uuid": "C42B3043-C7CF-423B-B16A-F8BFD3B89E7B",
+			"type": "MeshStandardMaterial",
+			"name": "wall_material",
+			"color": 10066329,
+			"roughness": 0.52,
+			"metalness": 0,
+			"emissive": 8421504,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true
+		}],
+	"object": {
+		"uuid": "B11B2CBE-DCE3-492D-B73C-94397842173B",
+		"type": "Scene",
+		"name": "Scene",
+		"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+		"children": [
+			{
+				"uuid": "958F65AC-B92E-4BEE-9C46-66229C3C93C9",
+				"type": "Mesh",
+				"name": "Sphere 1",
+				"castShadow": true,
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,7.336543,4.159612,-7.718897,1],
+				"geometry": "D90AC4E8-2621-400E-92AD-F938D55C3A82",
+				"material": "C42B3043-C7CF-423B-B16A-F8BFD3B89E7B"
+			},
+			{
+				"uuid": "CAEA9047-6BDB-437D-848C-11D090B88AE7",
+				"type": "Group",
+				"name": "Room",
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+				"children": [
+					{
+						"uuid": "6F16B4AD-98F0-4401-AAAC-E51C728DC26C",
+						"type": "PointLight",
+						"name": "PointLight 1",
+						"castShadow": true,
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,7.9,0,1],
+						"color": 15910384,
+						"intensity": 0.6,
+						"distance": 0,
+						"decay": 1,
+						"shadow": {
+							"camera": {
+								"uuid": "88FDED09-8ED3-4170-B669-4C8454DBD84E",
+								"type": "PerspectiveCamera",
+								"fov": 90,
+								"zoom": 1,
+								"near": 0.5,
+								"far": 500,
+								"focus": 10,
+								"aspect": 1,
+								"filmGauge": 35,
+								"filmOffset": 0
+							}
+						}
+					},
+					{
+						"uuid": "17A0CC1D-0EFF-4ACB-8892-A67B4ABA196C",
+						"type": "Mesh",
+						"name": "floor",
+						"receiveShadow": true,
+						"matrix": [1,0,0,0,0,0,-1,0,0,1,0,0,0,0,0,1],
+						"geometry": "4E40CB60-462E-40E1-9446-525B25EAD2B0",
+						"material": "C42B3043-C7CF-423B-B16A-F8BFD3B89E7B"
+					},
+					{
+						"uuid": "C38F210F-AC2E-4FE8-AE4F-4509F23D797B",
+						"type": "Mesh",
+						"name": "wall_west",
+						"receiveShadow": true,
+						"matrix": [0,0,-1,0,0,1,0,0,1,0,0,0,-12,4,0,1],
+						"geometry": "9DE6EE29-FBF6-42EA-8FD1-8D83D17F88FE",
+						"material": "C42B3043-C7CF-423B-B16A-F8BFD3B89E7B"
+					},
+					{
+						"uuid": "0F990BFF-EE29-4291-89AA-B954C0B37BA7",
+						"type": "Mesh",
+						"name": "wall_east",
+						"receiveShadow": true,
+						"matrix": [0,0,1,0,0,1,0,0,-1,0,0,0,12,4,0,1],
+						"geometry": "9DE6EE29-FBF6-42EA-8FD1-8D83D17F88FE",
+						"material": "C42B3043-C7CF-423B-B16A-F8BFD3B89E7B"
+					},
+					{
+						"uuid": "C4659813-D42B-46B4-B065-37F909B22B96",
+						"type": "Mesh",
+						"name": "wall_north",
+						"receiveShadow": true,
+						"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,4,-12,1],
+						"geometry": "9DE6EE29-FBF6-42EA-8FD1-8D83D17F88FE",
+						"material": "C42B3043-C7CF-423B-B16A-F8BFD3B89E7B"
+					},
+					{
+						"uuid": "E99D25ED-176F-4016-A1D5-6FCB50054DE8",
+						"type": "Mesh",
+						"name": "wall_south",
+						"receiveShadow": true,
+						"matrix": [-1,0,0,0,0,1,0,0,0,0,-1,0,0,4,12,1],
+						"geometry": "9DE6EE29-FBF6-42EA-8FD1-8D83D17F88FE",
+						"material": "C42B3043-C7CF-423B-B16A-F8BFD3B89E7B"
+					},
+					{
+						"uuid": "A0C60520-A768-499E-86C5-E66A5B7EA190",
+						"type": "Mesh",
+						"name": "cieling",
+						"receiveShadow": true,
+						"matrix": [1,0,0,0,0,0,1,0,0,-1,0,0,0,8,0,1],
+						"geometry": "4E40CB60-462E-40E1-9446-525B25EAD2B0",
+						"material": "C42B3043-C7CF-423B-B16A-F8BFD3B89E7B"
+					}]
+			}],
+		"background": 11184810,
+		"fog": {
+			"type": "Fog",
+			"color": 15378576,
+			"near": 0,
+			"far": 78.22
+		}
+	}
+}
